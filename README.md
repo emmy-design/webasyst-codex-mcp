@@ -1,5 +1,9 @@
 # Webasyst Codex MCP
 
+> **For Codex.** This repository is the Codex-first Webasyst MCP server, optimized for Codex rmcp client compatibility, automatic Webasyst UI 2.0 context, and post-edit UI audits.
+>
+> If you use Claude Desktop or Cursor, see the Claude/Cursor-oriented server: [emmy-design/webasyst-mcp](https://github.com/emmy-design/webasyst-mcp).
+
 Codex-first MCP server for Webasyst development. It exposes tools for inspecting and generating Webasyst apps, plugins, widgets, themes, actions, models, localization files, release bundles, DevOps snippets, and Webasyst UI 2.0 surfaces.
 
 This package is intentionally separate from `webasyst-mcp`: it keeps the broad Webasyst toolset, but adds Codex-compatible handshake behavior and a strict backend UI workflow around `wa-apps/ui`, `wa-2.0.css`, and Webasyst JS helpers.
