@@ -1,0 +1,26 @@
+# Файлы разработки
+.git
+.gitignore
+.cursor
+.codex
+.vscode
+.idea
+
+# Тестовые и временные файлы
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Файлы, не нужные в npm пакете
+PR_CHECKLIST.md
+package-lock.json
+node_modules
+
+# Secrets / local credentials
+*service-account*.json
+canvas-adviser-*.json
+*.pem
+*.key
+.env
+.env.*

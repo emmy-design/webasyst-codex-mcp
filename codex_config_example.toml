@@ -1,0 +1,4 @@
+[mcp_servers.webasyst]
+command = "node"
+args = ["/path/to/webasyst-codex-mcp/index.js"]
+env = { WEBASYST_ROOT = "/path/to/webasyst/root" }

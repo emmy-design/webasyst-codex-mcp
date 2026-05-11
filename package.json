@@ -1,0 +1,58 @@
+{
+  "name": "webasyst-codex-mcp",
+  "version": "2.3.0",
+  "description": "Codex-first MCP сервер для Webasyst: приложения, плагины, виджеты, темы, UI 2.0 и UI-аудит",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "webasyst-codex-mcp": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --inspect index.js",
+    "test": "node --check index.js"
+  },
+  "keywords": [
+    "webasyst",
+    "mcp",
+    "model-context-protocol",
+    "php-framework",
+    "development-tools",
+    "shop-script",
+    "site",
+    "ui",
+    "ai",
+    "codex"
+  ],
+  "author": "Vlad Arkhipov",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmy-design/webasyst-codex-mcp.git"
+  },
+  "homepage": "https://github.com/emmy-design/webasyst-codex-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/emmy-design/webasyst-codex-mcp/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "AGENTS.md",
+    "QUICKSTART.md",
+    "UI_COMPONENTS_REFERENCE.md",
+    "LOCALIZATION_GUIDE.md",
+    "DEVELOPMENT_STANDARDS.md",
+    "EXAMPLES.md",
+    "CONTRIBUTING.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "install.sh",
+    "codex_config_example.toml"
+  ]
+}
