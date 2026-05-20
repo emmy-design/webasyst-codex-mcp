@@ -17,7 +17,7 @@ For Webasyst backend UI work, the server also provides dedicated context and aud
 ## Install
 
 ```bash
-git clone git@github.com:emmy-design/webasyst-codex-mcp.git
+git clone https://github.com/emmy-design/webasyst-codex-mcp.git
 cd webasyst-codex-mcp
 npm install
 node index.js
@@ -37,8 +37,8 @@ Add the server to `~/.codex/config.toml`:
 ```toml
 [mcp_servers.webasyst]
 command = "node"
-args = ["/Users/vladarkhipov/Projects/webasyst-codex-mcp/index.js"]
-env = { WEBASYST_ROOT = "/Users/vladarkhipov/Projects/designer" }
+args = ["/path/to/webasyst-codex-mcp/index.js"]
+env = { WEBASYST_ROOT = "/path/to/webasyst/root" }
 ```
 
 `WEBASYST_ROOT` is optional but recommended. If it is omitted, the server searches upward from its current working directory until it finds `index.php` and `wa-system`.
@@ -78,7 +78,7 @@ The server also includes upstream Webasyst tooling for:
 Do not commit local credentials or project secrets. In particular, never include:
 
 - service-account JSON files;
-- `canvas-adviser-*.json`;
+- `*-service-account.json`;
 - private keys;
 - API tokens;
 - `node_modules/`;
@@ -87,7 +87,7 @@ Do not commit local credentials or project secrets. In particular, never include
 Run before publishing:
 
 ```bash
-rg -n "PRIVATE KEY|BEGIN|apiKey|secret|token|password|client_email" .
+rg -n --hidden --glob '!node_modules/**' --glob '!.git/**' "PRIVATE KEY|BEGIN|apiKey|secret|token|password|client_email|/Users/|/home/" .
 npm pack --dry-run
 ```
 

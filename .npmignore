@@ -19,7 +19,7 @@ node_modules
 
 # Secrets / local credentials
 *service-account*.json
-canvas-adviser-*.json
+*-service-account.json
 *.pem
 *.key
 .env

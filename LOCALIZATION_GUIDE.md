@@ -80,9 +80,9 @@ echo _w('%d item', '%d items', $count);
 
 ```php
 <?php
-// lib/actions/backend/designerBackendLoc.action.php
+// lib/actions/backend/sampleappBackendLoc.action.php
 
-class designerBackendLocAction extends waViewAction
+class sampleappBackendLocAction extends waViewAction
 {
     public function execute()
     {
@@ -130,13 +130,13 @@ class designerBackendLocAction extends waViewAction
 
 ```php
 <?php
-// lib/actions/backend/designerBackendLoc.controller.php
+// lib/actions/backend/sampleappBackendLoc.controller.php
 
-class designerBackendLocController extends waViewController
+class sampleappBackendLocController extends waViewController
 {
     public function execute()
     {
-        $this->executeAction(new designerBackendLocAction());
+        $this->executeAction(new sampleappBackendLocAction());
     }
 
     public function preExecute()
@@ -206,13 +206,13 @@ console.log(pluralize('%d item selected', 5)); // "5 элементов выбр
 ### Структура проекта с правильной локализацией:
 
 ```
-wa-apps/designer/
+wa-apps/sampleapp/
 ├── lib/
 │   ├── actions/
 │   │   └── backend/
-│   │       ├── designerBackendLoc.action.php      # Обработчик локализации
-│   │       ├── designerBackendLoc.controller.php  # Контроллер
-│   │       └── designerBackend.action.php         # Основной action
+│   │       ├── sampleappBackendLoc.action.php      # Обработчик локализации
+│   │       ├── sampleappBackendLoc.controller.php  # Контроллер
+│   │       └── sampleappBackend.action.php         # Основной action
 │   └── config/
 │       └── app.php                                # Конфигурация приложения
 ├── templates/
@@ -225,10 +225,10 @@ wa-apps/designer/
 └── locale/
     ├── en_US/
     │   └── LC_MESSAGES/
-    │       └── designer.po                        # Английские переводы
+    │       └── sampleapp.po                        # Английские переводы
     └── ru_RU/
         └── LC_MESSAGES/
-            └── designer.po                        # Русские переводы
+            └── sampleapp.po                        # Русские переводы
 ```
 
 ## Примеры из реальных приложений
@@ -357,15 +357,15 @@ echo _w('%d item', '%d items', $count);
 ### Создание .po файлов:
 ```bash
 # Извлечение строк из PHP
-xgettext -o locale/designer.pot --from-code=UTF-8 -L PHP --keyword=_w:1 --keyword=_w:1,2 lib/**/*.php
+xgettext -o locale/sampleapp.pot --from-code=UTF-8 -L PHP --keyword=_w:1 --keyword=_w:1,2 lib/**/*.php
 
 # Создание/обновление .po файла для языка
-msgmerge -U locale/ru_RU/LC_MESSAGES/designer.po locale/designer.pot
+msgmerge -U locale/ru_RU/LC_MESSAGES/sampleapp.po locale/sampleapp.pot
 ```
 
 ### Компиляция .po в .mo:
 ```bash
-msgfmt locale/ru_RU/LC_MESSAGES/designer.po -o locale/ru_RU/LC_MESSAGES/designer.mo
+msgfmt locale/ru_RU/LC_MESSAGES/sampleapp.po -o locale/ru_RU/LC_MESSAGES/sampleapp.mo
 ```
 
 ## Проверочный чек-лист
