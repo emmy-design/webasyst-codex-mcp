@@ -10,6 +10,38 @@ Codex-first MCP server for Webasyst development. It exposes tools for inspecting
 
 This package is intentionally separate from `webasyst-mcp`: it keeps the broad Webasyst toolset, but adds Codex-compatible handshake behavior and a strict backend UI workflow around `wa-apps/ui`, `wa-2.0.css`, and Webasyst JS helpers.
 
+## Build Webasyst With Codex
+
+Build Webasyst apps, plugins, themes and UI 2.0 screens with OpenAI Codex. This MCP server gives Codex structured tools for exploring a Webasyst installation, generating app/plugin/theme scaffolds, reading real UI component examples, and auditing backend templates after changes.
+
+It is designed for Webasyst work, so generated backend UI should use real Webasyst UI 2.0 patterns from `wa-apps/ui/templates/actions/component/`, not generic Bootstrap, Tailwind, or unrelated design-system markup.
+
+## Who Is This For?
+
+- Developers building custom Webasyst apps, plugins, widgets, themes, and Shop-Script extensions.
+- Vibe coders who want to prototype Webasyst features with AI assistants while staying close to Webasyst conventions.
+- Teams using Codex to turn product ideas into backend screens, settings pages, dialogs, tables, forms, and localized UI.
+- Webasyst integrators who want repeatable scaffolding, UI guidance, and post-edit checks inside their existing projects.
+
+## Build Your First Plugin In 5 Minutes
+
+1. Install this MCP server and add it to `~/.codex/config.toml`.
+2. Set `WEBASYST_ROOT` to your local Webasyst project root.
+3. Restart Codex and open your Webasyst project workspace.
+4. Ask Codex to create a plugin, settings screen, or UI component.
+5. Ask Codex to run `get_webasyst_ui_context` before UI work and `audit_webasyst_ui_surface` after template edits.
+
+## Example Prompts
+
+- "Create a Shop-Script plugin scaffold called `loyalty` with a Webasyst UI 2.0 settings screen."
+- "Show me the Webasyst UI 2.0 context for tables, fields, buttons, and dialogs before editing this backend page."
+- "Create a plugin settings form that uses real Webasyst `.fields`, `.button`, and dialog patterns."
+- "Audit this backend Smarty template for Webasyst UI 2.0 compatibility and fix the issues."
+- "Create a Site app widget scaffold with localized strings and frontend assets."
+- "Generate a Webasyst app structure for a lightweight CRM prototype."
+- "Read the real `dropdown` and `dialog` UI component examples and adapt this screen to match them."
+- "Prepare a release bundle for this Webasyst plugin after checking basic compliance."
+
 ## Why This Exists
 
 Codex may probe `resources/list` and `prompts/list` on tool-only MCP servers. This server returns empty lists for those requests so startup remains deterministic.
