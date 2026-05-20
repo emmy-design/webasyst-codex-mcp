@@ -1,7 +1,7 @@
 {
   "name": "webasyst-codex-mcp",
   "version": "2.3.0",
-  "description": "Codex-first MCP сервер для Webasyst: приложения, плагины, виджеты, темы, UI 2.0 и UI-аудит",
+  "description": "Неофициальный Codex-first MCP сервер для Webasyst: приложения, плагины, виджеты, темы, UI 2.0 и UI-аудит",
   "main": "index.js",
   "type": "module",
   "bin": {
